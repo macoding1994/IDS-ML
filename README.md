@@ -1,5 +1,9 @@
 # IDS-ML
 
+```python
+pip install -r requirements.txt
+```
+
 
 
 **定义目标**： 确定要解决的问题是分类、回归、聚类还是其他任务
