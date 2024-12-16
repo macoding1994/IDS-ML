@@ -12,8 +12,7 @@ from sklearn.metrics import (
     accuracy_score,
 )
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier, ExtraTreesClassifier
 import xgboost as xgb
 
 from config import SAMPLE_PATH
@@ -29,7 +28,7 @@ class ModelFactory:
             "DecisionTree": DecisionTreeClassifier(random_state=0),
             "RandomForest": RandomForestClassifier(random_state=0),
             "XGBoost": xgb.XGBClassifier(n_estimators=10),
-            "LogisticRegression": LogisticRegression(),
+            "ExtraTreesClassifier": ExtraTreesClassifier(),
         }
 
     def get_model(self):
@@ -98,7 +97,7 @@ def main():
     )
 
     # List of models to train
-    models = ["DecisionTree", "RandomForest", "XGBoost", "LogisticRegression"]
+    models = ["DecisionTree", "RandomForest", "XGBoost", "ExtraTreesClassifier"]
 
     # Train and evaluate each model
     for model_name in models:
