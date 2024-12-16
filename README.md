@@ -56,3 +56,22 @@ https://www.unb.ca/cic/datasets/ids-2017.html
 
 
 
+```python
+# training data:
+# BENIGN                        22731
+# DoS Hulk                      11554
+# DoS GoldenEye                 10293
+# PortScan                       7946
+# FTP-Patator                    7938
+# DDoS                           6401
+# SSH-Patator                    5897
+# DoS slowloris                  5796
+# DoS Slowhttptest               5499
+# Bot                            1966
+# Web Attack � Brute Force       1507
+# Web Attack � XSS                652
+# Infiltration                     36
+# Web Attack � Sql Injection       21
+# Heartbleed                       11
+# Name: Label, dtype: int64
+```
