@@ -1,6 +1,5 @@
 import warnings
 import pandas as pd
-import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import LabelEncoder
@@ -88,6 +87,11 @@ def main():
     # Encode labels into integers
     labelencoder = LabelEncoder()
     df["Label"] = labelencoder.fit_transform(df["Label"])
+    # Label Mapping
+    label_mapping = {index: label for index, label in enumerate(labelencoder.classes_)}
+    print("Label Mapping (Integer -> Original):")
+    for k, v in label_mapping.items():
+        print(f"{k} -> {v}")
 
     # Split data into training and testing sets
     X = df.drop(["Label"], axis=1).values  # Features
